@@ -4,9 +4,6 @@ inputs:
     chartName:
         description: "Chart name"
         required: true
-    chartAnnotations:
-        description: "Chart annotations"
-        required: false
     chartNamespace:
         description: "Chart namespace"
         required: true
