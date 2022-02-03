@@ -7,8 +7,8 @@ inputs:
     chartNamespace:
         description: "Chart namespace"
         required: true
-    releaseName:
-        description: "Release name"
+    appName:
+        description: "Application's name"
         required: true
     appNamespace:
         description: "Application's namespace"

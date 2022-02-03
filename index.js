@@ -42,7 +42,7 @@ try {
         "charts": [
             {
                 "chartName": core.getInput('chartName'),
-                "releaseName": core.getInput('releaseName'),
+                "releaseName": core.getInput('appName'),
                 "values": inputValues
             }
         ],
