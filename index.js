@@ -69,10 +69,10 @@ try {
 
     const request = https.request(options, () => {
         console.log('App deployed');
+        request.end();
     });
 
     request.on('error', error => core.setFailed(error.message))
-    request.end();
 } catch (error) {
     core.setFailed(error.message)
 }
