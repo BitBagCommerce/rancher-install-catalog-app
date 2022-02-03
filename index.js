@@ -7,8 +7,8 @@ try {
             {
                 "chartName": core.getInput('chartName'),
                 "releaseName": core.getInput('releaseName'),
-                "annotations": core.getInput('chartAnnotations') || {},
-                "values": core.getInput('values') || {}
+                "annotations": JSON.parse(core.getInput('chartAnnotations')),
+                "values": JSON.parse(core.getInput('values'))
             }
         ],
         "noHooks": false,

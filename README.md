@@ -7,7 +7,7 @@
         uses: BitBagCommerce/rancher-install-catalog-app@v0.1
         with:
             chartName: ${{ secrets.CHART_NAME }}
-            chartAnnotations: {}
+            chartAnnotations: '{"key":"value"}'
             chartNamespace: ${{ secrets.CHART_NAMESPACE }}
             releaseName: 'some-app'
             appNamespace: 'some-namespace'
@@ -15,8 +15,7 @@
             projectId: ${{ secrets.RANCHER_PROJECT_ID }}
             rancherToken: ${{ secrets.RANCHER_BEARER_TOKEN }}
             rancherUrl: ${{ secrets.RANCHER_URL }}
-            values:
-                hostname: 'some-hostname.com'
+            values: '{"key":"value"}'
 ```
 ## License
 
