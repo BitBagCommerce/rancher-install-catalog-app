@@ -8,7 +8,7 @@
         with:
             chartName: ${{ secrets.CHART_NAME }}
             chartNamespace: ${{ secrets.CHART_NAMESPACE }}
-            releaseName: 'some-app'
+            appName: 'some-app'
             appNamespace: 'some-namespace'
             clusterId: ${{ secrets.RANCHER_CLUSTER_ID }}
             projectId: ${{ secrets.RANCHER_PROJECT_ID }}
