@@ -62,9 +62,9 @@ try {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            Authorization: `Bearer ${core.getInput('rancherToken')}`
-        },
-        json: data
+            Authorization: `Bearer ${core.getInput('rancherToken')}`,
+            'Content-Length': data.length
+        }
     };
 
     const request = https.request(options, (response) => {
@@ -78,11 +78,12 @@ try {
             } else {
                 console.log('App deployed');
             }
-            request.end();
         });
     });
 
+    request.write(data);
     request.on('error', error => core.setFailed(error.message))
+    request.end();
 } catch (error) {
     core.setFailed(error.message)
 }
