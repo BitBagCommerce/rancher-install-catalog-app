@@ -56,7 +56,7 @@ try {
     };
 
     const options = {
-        hostname: core.getInput('rancherUrl'),
+        hostname: core.getInput('rancherUrl').replace(/http(s)?\:\/\//g, ''),
         port: 443,
         path: `/v1/catalog.cattle.io.clusterrepos/${core.getInput('chartNamespace')}?action=install`,
         method: 'POST',
