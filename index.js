@@ -38,7 +38,7 @@ try {
         mergeDeep(inputValues, tempObject);
     });
 
-    const data = {
+    const data = JSON.stringify({
         "charts": [
             {
                 "chartName": core.getInput('chartName'),
@@ -53,7 +53,7 @@ try {
         "projectId": `${core.getInput('clusterId')}/${core.getInput('projectId')}`,
         "disableOpenAPIValidation": false,
         "skipCRDs": false
-    };
+    });
 
     const options = {
         hostname: core.getInput('rancherUrl').replace(/http(s)?\:\/\//g, ''),
