@@ -67,9 +67,12 @@ try {
         json: data
     };
 
-    https
-        .request(options)
-        .on('error', error => core.setFailed(error.message));
+    const request = https.request(options, () => {
+        console.log('App deployed');
+    });
+
+    request.on('error', error => core.setFailed(error.message))
+    request.end();
 } catch (error) {
     core.setFailed(error.message)
 }
