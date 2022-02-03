@@ -1,0 +1,37 @@
+name: 'Create Rancher catalog app'
+description: 'Creates application based on given catalog app id and values'
+inputs:
+    chartName:
+        description: "Chart name"
+        required: true
+    chartAnnotations:
+        description: "Chart annotations"
+        required: false
+    chartNamespace:
+        description: "Chart namespace"
+        required: true
+    releaseName:
+        description: "Release name"
+        required: true
+    appNamespace:
+        description: "Application's namespace"
+        required: true
+    clusterId:
+        description: "Cluster id"
+        required: true
+    projectId:
+        description: "Project id"
+        required: true
+    rancherToken:
+        description: "Rancher's API token"
+        required: true
+    rancherUrl:
+        description: "Rancher's base url"
+        required: true
+    values:
+        description: "Values for chart"
+        required: true
+runs:
+  using: 'node12'
+  main: 'index.js'
+
